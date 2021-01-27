@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixing";
+@import "animations";
+@import "global";
+@import "header";
+@import "hero";
+
+.main {
+  position: relative;
+  background-color: $lightGrayishBlue;
+  color: white;
+  top: -100px;
+
+  @include breakpoint-up(large) {
+    z-index: $z-normal;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1000px) {
+  .header nav {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}

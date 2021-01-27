@@ -1,0 +1,29 @@
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fadeIn {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+.fadeOut {
+  animation: fade-out 0.3s ease-in-out forwards;
+}

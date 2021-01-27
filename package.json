@@ -1,0 +1,17 @@
+{
+  "name": "easybank-landing-page",
+  "version": "1.0.0",
+  "description": "Fontend Mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "ag.dev20@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.5"
+  }
+}
