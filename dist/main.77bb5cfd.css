@@ -154,12 +154,12 @@ button,
   padding: 0.9rem 2.1rem;
   border-radius: 50px;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-size: 0.9rem;
 }
 button:hover,
 .button:hover {
-  opacity: 0.6;
+  filter: brightness(120%);
 }
 
 @media (max-width: 63.937em) {
@@ -387,6 +387,105 @@ button:hover,
   }
 }
 
+.footer {
+  position: relative;
+  background-color: #2d314d;
+  color: white;
+  text-align: center;
+}
+.footer .container {
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .container div:not(:last-child) {
+    margin-right: 6.8rem;
+  }
+  .footer .container div:first-child {
+    text-align: start;
+  }
+  .footer .container div:last-child {
+    text-align: end;
+  }
+}
+.footer__logo {
+  margin-bottom: 1.8rem;
+  display: inline-block;
+}
+@media (min-width: 64em) {
+  .footer__logo {
+    margin-bottom: 3.2rem;
+  }
+}
+.footer__social {
+  margin-bottom: 1.8rem;
+}
+@media (min-width: 64em) {
+  .footer__social {
+    margin-bottom: 0;
+  }
+}
+.footer__social a:not(:last-child) {
+  margin-right: 0.9rem;
+}
+.footer__social a {
+  display: inline-block;
+}
+.footer__social a svg path {
+  transition: all 0.3s ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: #2bb7da;
+}
+.footer__links li {
+  flex-direction: column;
+  margin-bottom: 1.8rem;
+}
+.footer__links li a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+.footer__links li a:hover {
+  color: #2bb7da;
+}
+@media (min-width: 64em) {
+  .footer__links li a {
+    text-align: start;
+    margin-bottom: 0;
+  }
+  .footer__links li a:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+}
+.footer__links li:first-child {
+  margin-bottom: 0;
+}
+.footer__button {
+  margin-bottom: 1.8rem;
+}
+@media (min-width: 64em) {
+  .footer__button {
+    margin-bottom: 1rem;
+  }
+}
+.footer__button-rights {
+  margin-top: 1.1rem;
+}
+@media (min-width: 64em) {
+  .footer__button-rights {
+    margin-left: auto;
+  }
+}
+
 .features {
   position: relative;
   background-color: #f3f4f6;
@@ -474,17 +573,13 @@ button:hover,
 .articles {
   position: relative;
   background-color: #fafafa;
-  min-height: 100vh;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 @media (min-width: 64em) {
   .articles {
-    min-height: 700px;
-    top: -105px;
     z-index: 1;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 0;
   }
 }
 .articles__header {
@@ -522,7 +617,8 @@ button:hover,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 5px 5px 0 0;
+  border-radius: 6px 6px 0 0;
+  background-color: #f3f4f6;
 }
 .articles__item {
   display: block;
@@ -537,10 +633,7 @@ button:hover,
     flex: 1 0 50%;
   }
   .articles__item:nth-child(odd) {
-    padding-right: 2rem;
-  }
-  .articles__item:nth-child(even) {
-    padding-left: 2rem;
+    padding-right: 2.6rem;
   }
 }
 @media (min-width: 64em) {
@@ -548,12 +641,8 @@ button:hover,
     flex: 1;
     margin-bottom: 0;
   }
-  .articles__item:nth-child(odd) {
-    padding-right: 2rem;
-  }
   .articles__item:nth-child(even) {
-    padding-left: 0;
-    padding-right: 2rem;
+    padding-right: 2.6rem;
   }
   .articles__item:last-child {
     padding-right: 0;
@@ -573,14 +662,15 @@ button:hover,
 }
 .articles__txt {
   padding: 2rem;
+  padding-top: 2.6rem;
   background-color: white;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .articles__author {
   font-size: 0.7rem;
+  margin-bottom: 1.1rem;
 }
 .articles__title {
-  margin-top: 1rem;
   margin-bottom: 1.1rem;
   font-size: 0.95rem;
   transition: opacity 0.3s ease-in-out;
@@ -590,12 +680,15 @@ button:hover,
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.8rem;
   text-align: center;
+  color: #a59b9b;
+  padding: 2rem;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #c0c5d8;
+  font-weight: 700;
 }
 
 @media (max-width: 1000px) {

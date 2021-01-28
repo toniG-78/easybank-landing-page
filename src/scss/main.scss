@@ -6,7 +6,7 @@
 @import "hero";
 @import "footer";
 
-// FEATURES SECTION ************
+// FEATURES SECTION *************************
 .features {
   position: relative;
   background-color: $lightGrayishBlue;
@@ -95,20 +95,16 @@
   }
 }
 
-// ARTICLES SECTION **********
+// ARTICLES SECTION *************************
 .articles {
   position: relative;
   background-color: $veryLightGray;
-  min-height: 100vh;
   padding-top: 4rem;
   padding-bottom: 4rem;
 
   @include breakpoint-up(large) {
-    min-height: $section-desktop-height;
-    top: -105px;
     z-index: $z-normal;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 0;
   }
 
   &__header {
@@ -147,7 +143,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 5px 5px 0 0;
+    border-radius: 6px 6px 0 0;
+    background-color: $lightGrayishBlue;
   }
 
   &__item {
@@ -163,10 +160,7 @@
       flex: 1 0 50%;
 
       &:nth-child(odd) {
-        padding-right: 2rem;
-      }
-      &:nth-child(even) {
-        padding-left: 2rem;
+        padding-right: 2.6rem;
       }
     }
 
@@ -174,13 +168,8 @@
       flex: 1;
       margin-bottom: 0; // only for one row articles
 
-      &:nth-child(odd) {
-        padding-right: 2rem;
-      }
-
       &:nth-child(even) {
-        padding-left: 0;
-        padding-right: 2rem;
+        padding-right: 2.6rem;
       }
 
       &:last-child {
@@ -215,16 +204,17 @@
 
   &__txt {
     padding: 2rem;
+    padding-top: 2.6rem;
     background-color: $white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   }
 
   &__author {
     font-size: 0.7rem;
+    margin-bottom: 1.1rem;
   }
 
   &__title {
-    margin-top: 1rem;
     margin-bottom: 1.1rem;
     font-size: 0.95rem;
     transition: opacity 0.3s ease-in-out;
@@ -236,11 +226,14 @@
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.8rem;
   text-align: center;
+  color: rgb(165, 155, 155);
+  padding: 2rem;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(227, 24%, 80%);
+  font-weight: 700;
 }
 
 // pass to _header scss file
