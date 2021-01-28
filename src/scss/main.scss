@@ -4,15 +4,234 @@
 @import "global";
 @import "header";
 @import "hero";
+@import "footer";
 
-.main {
+// FEATURES SECTION ************
+.features {
   position: relative;
   background-color: $lightGrayishBlue;
-  color: white;
-  top: -100px;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   @include breakpoint-up(large) {
+    min-height: $section-desktop-height;
+    top: -100px;
     z-index: $z-normal;
+  }
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 3.9rem;
+
+    @include breakpoint-up(medium) {
+      text-align: start;
+      width: 70%;
+    }
+
+    @include breakpoint-up(large) {
+      text-align: start;
+      width: 55%;
+    }
+  }
+
+  &__grid {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: start;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1 0 50%;
+
+      &:nth-child(odd) {
+        padding-right: 2rem;
+      }
+      &:nth-child(even) {
+        padding-left: 2rem;
+      }
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      padding-right: 1.6rem;
+      margin-bottom: 0;
+
+      &:nth-child(odd) {
+        padding-right: 2rem;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0;
+        padding-right: 2rem;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    img {
+      margin-bottom: 1.9rem;
+    }
+
+    p {
+      font-size: $font-s;
+    }
+  }
+}
+
+// ARTICLES SECTION **********
+.articles {
+  position: relative;
+  background-color: $veryLightGray;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint-up(large) {
+    min-height: $section-desktop-height;
+    top: -105px;
+    z-index: $z-normal;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint-up(medium) {
+      text-align: start;
+    }
+  }
+
+  &__grid {
+    text-align: start;
+
+    /* GRID OPTION */
+    /*
+        display: grid;
+    grid-template-columns: 1fr;
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    */
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: start;
+    }
+  }
+
+  &__img {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+
+    &:hover .articles__title {
+      opacity: 0.5;
+    }
+
+    @include breakpoint-up(medium) {
+      flex: 1 0 50%;
+
+      &:nth-child(odd) {
+        padding-right: 2rem;
+      }
+      &:nth-child(even) {
+        padding-left: 2rem;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      margin-bottom: 0; // only for one row articles
+
+      &:nth-child(odd) {
+        padding-right: 2rem;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0;
+        padding-right: 2rem;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &:first-child {
+      .articles__img {
+        background-image: url("../images/image-currency.jpg");
+      }
+    }
+
+    &:nth-child(2) {
+      .articles__img {
+        background-image: url("../images/image-restaurant.jpg");
+      }
+    }
+
+    &:nth-child(3) {
+      .articles__img {
+        background-image: url("../images/image-plane.jpg");
+      }
+    }
+
+    &:nth-child(4) {
+      .articles__img {
+        background-image: url("../images/image-confetti.jpg");
+      }
+    }
+  }
+
+  &__txt {
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &__author {
+    font-size: 0.7rem;
+  }
+
+  &__title {
+    margin-top: 1rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__desc {
+    font-size: 0.8rem;
   }
 }
 
@@ -24,6 +243,7 @@
   color: hsl(228, 45%, 44%);
 }
 
+// pass to _header scss file
 @media (max-width: 1000px) {
   .header nav {
     padding-top: 0.8rem;
