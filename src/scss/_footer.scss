@@ -26,6 +26,7 @@
     }
   }
 
+  // FOOTER LOGO
   &__logo {
     margin-bottom: 1rem;
     @include breakpoint-up(large) {
@@ -35,6 +36,7 @@
     }
   }
 
+  // FOOTER SOCIAL LINKS
   &__social {
     margin-bottom: 1rem;
     @include breakpoint-up(large) {
@@ -42,7 +44,7 @@
     }
 
     a {
-      padding: 1rem;
+      padding: 0.75rem;
       @include breakpoint-up(large) {
         padding-left: 0;
         padding-right: 0.8rem;
@@ -61,6 +63,7 @@
     }
   }
 
+  // FOOTER MENU LINKS
   &__links {
     li {
       flex-direction: column;

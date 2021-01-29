@@ -127,14 +127,18 @@ hamburger.addEventListener("click", function () {
   if (!menuOpen) {
     hamburger.classList.add("open");
     overlay.classList.remove("fadeOut");
-    overlay.classList.add("fadeIn");
-    mobileMenu.style.display = "block";
+    overlay.classList.add("fadeIn"); //mobileMenu.style.display = "block";
+
+    mobileMenu.classList.add("fadeIn");
+    mobileMenu.classList.remove("fadeOut");
     menuOpen = true;
   } else {
     hamburger.classList.remove("open");
     overlay.classList.remove("fadeIn");
     overlay.classList.add("fadeOut");
-    mobileMenu.style.display = "none";
+    mobileMenu.classList.remove("fadeIn");
+    mobileMenu.classList.add("fadeOut"); //mobileMenu.style.display = "none";
+
     menuOpen = false;
   }
 });
@@ -143,8 +147,9 @@ var mediaQuery = window.matchMedia("(min-width: 1024px)");
 function handleTabletChange(e) {
   if (e.matches) {
     hamburger.classList.remove("open");
-    overlay.classList.remove("fadeIn");
-    mobileMenu.style.display = "none";
+    overlay.classList.remove("fadeIn"); //mobileMenu.style.display = "none";
+
+    mobileMenu.classList.remove("fadeIn");
     menuOpen = false;
   }
 }
@@ -179,7 +184,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61901" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52134" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

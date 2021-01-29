@@ -132,6 +132,7 @@ p {
   }
 }
 
+// MAIN BTN
 button,
 .button {
   background: linear-gradient(to right, $limeGreen, $brightCyan);
@@ -149,6 +150,7 @@ button,
   }
 }
 
+// MEDIA QUERIES
 .hide-for-mobile {
   @include breakpoint-down(medium) {
     display: none;

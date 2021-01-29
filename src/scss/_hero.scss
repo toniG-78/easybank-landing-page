@@ -30,6 +30,7 @@
     }
   }
 
+  // HERO TEXT
   &__text {
     text-align: center;
 
@@ -62,6 +63,7 @@
     }
   }
 
+  // HERO BTN
   &__button {
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -71,7 +73,7 @@
     }
   }
 
-  //bg svg
+  // HERO BACKGROUND IMG .svg
   &__image-bg-intro {
     position: absolute;
     width: 100%;
@@ -104,7 +106,7 @@
   }
 }
 
-//bg png phones
+// HERO BACKGROUND IMG .png (phones)
 .image-mockups {
   position: absolute;
   width: 100%;

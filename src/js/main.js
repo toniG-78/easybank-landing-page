@@ -10,13 +10,17 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.add("open");
     overlay.classList.remove("fadeOut");
     overlay.classList.add("fadeIn");
-    mobileMenu.style.display = "block";
+    //mobileMenu.style.display = "block";
+    mobileMenu.classList.add("fadeIn");
+    mobileMenu.classList.remove("fadeOut");
     menuOpen = true;
   } else {
     hamburger.classList.remove("open");
     overlay.classList.remove("fadeIn");
     overlay.classList.add("fadeOut");
-    mobileMenu.style.display = "none";
+    mobileMenu.classList.remove("fadeIn");
+    mobileMenu.classList.add("fadeOut");
+    //mobileMenu.style.display = "none";
     menuOpen = false;
   }
 });
@@ -26,7 +30,8 @@ function handleTabletChange(e) {
   if (e.matches) {
     hamburger.classList.remove("open");
     overlay.classList.remove("fadeIn");
-    mobileMenu.style.display = "none";
+    //mobileMenu.style.display = "none";
+    mobileMenu.classList.remove("fadeIn");
     menuOpen = false;
   }
 }

@@ -270,7 +270,8 @@ button:hover,
   opacity: 1;
 }
 .header__mobile-menu {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   width: calc(100% - 4rem);
   left: 50%;
@@ -289,9 +290,10 @@ button:hover,
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1rem;
-  /*       &:not(:last-child) {
-    padding-bottom: 26px;
-  } */
+  transition: color 0.3s ease-in-out;
+}
+.header__mobile-menu a:hover {
+  color: #2bb7da;
 }
 .header .overlay {
   position: absolute;
@@ -489,7 +491,7 @@ button:hover,
   }
 }
 .footer__social a {
-  padding: 1rem;
+  padding: 0.75rem;
 }
 @media (min-width: 64em) {
   .footer__social a {
@@ -760,7 +762,6 @@ button:hover,
   font-size: 0.8rem;
   text-align: center;
   color: #a59b9b;
-  padding: 2rem;
 }
 
 .attribution a {
