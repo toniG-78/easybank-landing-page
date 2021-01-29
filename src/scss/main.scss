@@ -10,7 +10,7 @@
 .features {
   position: relative;
   background-color: $lightGrayishBlue;
-  min-height: 100vh;
+  //min-height: 100vh;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
@@ -99,12 +99,17 @@
 .articles {
   position: relative;
   background-color: $veryLightGray;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   @include breakpoint-up(large) {
     z-index: $z-normal;
     padding-top: 0;
+  }
+
+  a {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &__header {
@@ -145,10 +150,10 @@
     background-position: center;
     border-radius: 6px 6px 0 0;
     background-color: $lightGrayishBlue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 
   &__item {
-    display: block;
     margin-bottom: 2.5rem;
     cursor: pointer;
 
@@ -177,6 +182,7 @@
       }
     }
 
+    // BACKGROUND IMAGES *******
     &:first-child {
       .articles__img {
         background-image: url("../images/image-currency.jpg");
@@ -203,10 +209,21 @@
   }
 
   &__txt {
-    padding: 2rem;
     padding-top: 2.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
     background-color: $white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    @include breakpoint-up(medium) {
+      height: 240px;
+    }
+
+    @include breakpoint-up(large) {
+      height: 290px;
+    }
   }
 
   &__author {
@@ -234,12 +251,4 @@
 .attribution a {
   color: hsl(227, 24%, 80%);
   font-weight: 700;
-}
-
-// pass to _header scss file
-@media (max-width: 1000px) {
-  .header nav {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-  }
 }

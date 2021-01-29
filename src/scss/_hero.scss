@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  min-height: 100vh;
   background-color: $veryLightGray;
   overflow: hidden;
   z-index: $z-normal;
@@ -17,7 +16,12 @@
   }
 
   &__empty-div {
-    min-height: 50vh; /*70vh tablet*/
+    min-height: 50vh;
+
+    @include breakpoint-up(medium) {
+      min-height: 560px;
+      top: 100px;
+    }
 
     @include breakpoint-up(large) {
       min-height: 600px;
@@ -28,7 +32,14 @@
 
   &__text {
     text-align: center;
-    min-height: 50vh; /*70vh tablet*/
+
+    p {
+      margin: auto;
+
+      @include breakpoint-up(medium) {
+        width: 70%;
+      }
+    }
 
     @include breakpoint-up(large) {
       min-height: 600px;
@@ -39,6 +50,11 @@
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
+
+      p {
+        margin: 0;
+        width: 100%;
+      }
     }
 
     @include breakpoint-up(large) {
@@ -48,21 +64,30 @@
 
   &__button {
     margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 2rem;
+    }
   }
 
   //bg svg
   &__image-bg-intro {
     position: absolute;
     width: 100%;
-    min-height: 47vh;
+    min-height: 50vh;
     z-index: $z-back;
-    top: 60px;
+    top: 46px;
     left: 0;
     right: 0;
     background-image: url("../images/bg-intro-mobile.svg");
     background-size: 100%;
     background-position: center 90%;
     background-repeat: no-repeat;
+
+    @include breakpoint-up(medium) {
+      min-height: 560px;
+    }
 
     @include breakpoint-up(large) {
       min-height: 1200px;
@@ -71,6 +96,10 @@
       background-image: url("../images/bg-intro-desktop.svg");
       background-size: 86%;
       background-position: center top;
+    }
+
+    @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+      left: 450px;
     }
   }
 }
@@ -89,11 +118,20 @@
   background-position: center bottom;
   background-repeat: no-repeat;
 
+  @include breakpoint-up(medium) {
+    min-height: 500px;
+    background-size: 80%;
+  }
+
   @include breakpoint-up(large) {
     min-height: 1000px;
     top: -100px;
     left: 650px;
     background-size: 60%;
     background-position: center top;
+  }
+
+  @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+    left: 450px;
   }
 }

@@ -4,7 +4,21 @@
   background-color: $white;
   z-index: $z-fixed;
 
+  @media (max-height: 520px) {
+    position: absolute;
+  }
+
+  nav {
+    height: $navbar-height;
+
+    @media (max-width: 1000px) {
+      height: $navbar-height-mobile;
+    }
+  }
+
   &__logo {
+    padding-left: 0;
+
     > img {
       vertical-align: middle;
       width: 9rem;
@@ -45,6 +59,7 @@
       }
     }
 
+    // Animation
     &.open {
       .hamburger-menu {
         transform: translateX(-50px);
@@ -63,13 +78,9 @@
 
   // DESKTOP MENU LINKS
   &__links {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
     a {
+      height: inherit;
       position: relative;
-      padding-top: inherit;
-      padding-bottom: inherit;
       font-size: $font-s;
       color: $grayishBlue;
       transition: color 0.2s ease-in-out;
@@ -83,7 +94,7 @@
         position: absolute;
         width: 100%;
         height: 2.5px;
-        bottom: -10px;
+        bottom: -24px;
         left: 0;
         background-color: $darkBlue;
         opacity: 0;
@@ -104,7 +115,7 @@
   &__mobile-menu {
     display: none;
     position: absolute;
-    width: calc(100% - 3rem);
+    width: calc(100% - 4rem);
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1.9rem;
@@ -120,10 +131,11 @@
       color: $darkBlue;
       font-weight: 700;
       font-size: $font-m;
+      padding: 1rem;
 
-      &:not(:last-child) {
+      /*       &:not(:last-child) {
         padding-bottom: 26px;
-      }
+      } */
     }
   }
 

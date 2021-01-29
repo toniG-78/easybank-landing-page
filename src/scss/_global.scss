@@ -18,9 +18,14 @@ body {
   background-color: $veryLightGray;
 }
 
+a {
+  padding: 0.5rem 0.7rem;
+}
+
 a,
 a:hover,
 a:visited {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -65,7 +70,6 @@ p {
 
 .container {
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
 
   &-p-all {
