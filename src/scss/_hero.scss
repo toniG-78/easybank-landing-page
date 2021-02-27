@@ -106,34 +106,20 @@
   }
 }
 
-// HERO BACKGROUND IMG .png (phones)
-.image-mockups {
+.img-wrapper {
   position: absolute;
-  width: 100%;
-  min-height: 44vh;
-  z-index: $z-tooltip; //1
-  top: 30px;
-  left: 0;
+  width: 50%;
+  min-height: 100vh;
+  overflow: hidden;
+  top: 0;
   right: 0;
-  background-image: url("../images/image-mockups.png");
-  background-size: 90%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  z-index: 5;
 
-  @include breakpoint-up(medium) {
-    min-height: 500px;
-    background-size: 80%;
-  }
-
-  @include breakpoint-up(large) {
-    min-height: 1000px;
-    top: -100px;
-    left: 650px;
-    background-size: 60%;
-    background-position: center top;
-  }
-
-  @media only screen and (min-width: 1000px) and (max-width: 1300px) {
-    left: 450px;
+  img {
+    width: 620px;
+    height: auto;
+    right: -190px;
+    position: relative;
+    top: -70px;
   }
 }

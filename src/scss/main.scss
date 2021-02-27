@@ -10,7 +10,7 @@
 .features {
   position: relative;
   background-color: $lightGrayishBlue;
-  //min-height: 100vh;
+  min-height: 100vh;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
@@ -212,17 +212,17 @@
     padding-top: 2.6rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     background-color: $white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
     @include breakpoint-up(medium) {
-      height: 240px;
+      // height: 240px;
     }
 
     @include breakpoint-up(large) {
-      height: 290px;
+      // height: 290px;
     }
   }
 
